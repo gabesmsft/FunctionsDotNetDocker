@@ -5,6 +5,11 @@
 		"logLevel": {
 		  "LocalFunctionsProject.HttpExample": "Trace",
 		  "default": "None"
+		},
+		"applicationInsights": {
+			"samplingSettings": {
+				"isEnabled": false
+			}
 		}
 	}
 }
