@@ -3,8 +3,8 @@
 	"logging": {
 		"fileLoggingMode": "debugOnly",
 		"logLevel": {
-		  "LocalFunctionsProject.HttpExample": "Trace",
-		  "default": "Trace"
+		  "LocalFunctionsProject.HttpExample.Run": "Trace",
+		  "default": "None"
 		},
 		"applicationInsights": {
 			"samplingSettings": {
