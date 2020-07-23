@@ -12,13 +12,3 @@ ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
     AzureFunctionsJobHost__Logging__Console__IsEnabled=true
 
 COPY --from=installer-env ["/home/site/wwwroot", "/home/site/wwwroot"]
-
-ADD resolv.conf /etc/resolv.conf.override
-CMD cp /etc/resolv.conf.override /etc/resolv.conf
-
-RUN apt-get update
-RUN apt-get install -y curl
-RUN echo "nameserver myDNS\n" > /etc/resolv.conf; \
-    export VERSION=$(curl myURL 2>&1 | grep -o -E 'href="([^"#]+)"' | cut -d'"' -f2 | egrep component-[0-9].[0-9].[0-9]$ | cut -d'-' -f3); \
-    echo $VERSION
-	
